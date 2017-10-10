@@ -57,7 +57,7 @@ module Rack
     # @param [Hash] content_type the response Content Type
     # @return [TrueClass|FalseClass]
     def json_response?(content_type)
-      !content_type.nil? && !content_type.match(/^application\/json/i).nil?
+      !content_type.nil? && !content_type.match(/^application\/(.+)json/i).nil?
     end
 
   end
